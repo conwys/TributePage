@@ -9,14 +9,17 @@
 }
 
 main {
-    background: linear-gradient(
-      to right, 
-      rgb(123, 255, 46), 
-      hsl(204 100% 59%)
-    );
+    background-image: linear-gradient(90deg,#33e3f0,#ee84e9,#33e3f0,#ee84e9);
+    background-size: 300% 100%;
+    animation: animateBg 3s linear infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
+}
+
+@keyframes animateBg {
+    0% { background-position: 100% 0%; }
+    100% { background-position: 0% 100%; }
 }
 
 body, html {
@@ -39,6 +42,11 @@ body {
 
 h1 {
     font-size: 72pt;
+    transition: text-shadow 1s;
+}
+
+h1:hover {
+    text-shadow: 0 10px 10px rgba(0, 0, 0, 0.692);
 }
 
 p {
@@ -60,7 +68,6 @@ img {
     max-width: 50px;
     max-height: 50px;
     color:rgb(255, 255, 255);
-    display: block;
 }
 
 svg {
